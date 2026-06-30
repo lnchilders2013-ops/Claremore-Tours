@@ -1,40 +1,115 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Page Title</title>
+    <title>Hotel Will Rogers | Downtown Claremore Historic Walking Tour</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
-<body
+
+<body>
     <div class="container">
+        <div class="stop-card">
 
-        <h1>Downtown Claremore Historic Walking Tour</h1>
-<div class="stop">
-        <p>
-            Welcome to the Downtown Claremore Historic Walking Tour.
-            Explore the stories behind some of Claremore's most historic buildings.
-        </p>
+            <h1>Hotel Will Rogers</h1>
+<p class="subtitle">1929–1930 • Historic Landmark • Stop 1 of 6</p>
 
-        <div class="stop">
-            <h2>Stop 1: Hotel Will Rogers</h2>
-<p>Address: 524 W. Will Rogers Blvd, Claremore, OK</p>
-            <h3>Today</h3>
-            <img src="hotel-current.jpg" alt="Hotel Will Rogers today" class="current-photo">
+<div class="intro-quote">
+    <p>
+        <em>
+            "Imagine arriving in Claremore during the height of the mineral bath era. The scent of sulfur filled the air, travelers bustled through downtown, and the Hotel Will Rogers stood ready to welcome guests from near and far. Today, you're standing where generations of visitors once began their Claremore experience."
+        </em>
+    </p>
+</div>
 
-            <h3>Historic View</h3>
-           <img src="hotel-1930.jpg" alt="Historic Hotel Will Rogers" class="historic-photo">
+<h2 class="section-title">Then &amp; Now</h2>
+
+            <div class="image-compare">
+                <img src="hotel-1930.jpg" alt="Historic Hotel Will Rogers">
+
+                <div class="image-overlay">
+                    <img src="hotel-current.jpg" alt="Hotel Will Rogers today">
+                </div>
+
+                <input type="range" min="0" max="100" value="50" class="slider">
+            </div>
+
+            <p class="photo-note">Slide to compare today with the historic view.</p>
+
+            <h2 class="section-title">At a Glance</h2>
+
+            <div class="facts-grid">
+
+                <div class="fact-card">
+                    <div class="fact-icon"><i class="fa-solid fa-hammer"></i></div>
+                    <h3>Built</h3>
+                    <p>1929–1930</p>
+                </div>
+
+                <div class="fact-card">
+                    <div class="fact-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <h3>Architecture</h3>
+                    <p>Art Deco</p>
+                </div>
+
+                <div class="fact-card">
+                    <div class="fact-icon"><i class="fa-solid fa-hotel"></i></div>
+                    <h3>Originally</h3>
+                    <p>Hotel Will Rogers</p>
+                </div>
+
+                <div class="fact-card">
+                    <div class="fact-icon"><i class="fa-solid fa-location-dot"></i></div>
+                    <h3>Today</h3>
+                    <p>
+                        Will Rogers Lofts<br>
+                        Gibby's Restaurant<br>
+                        French Quarter Coffee Co.
+                    </p>
+                </div>
+
+                <div class="fact-card">
+                    <div class="fact-icon"><i class="fa-solid fa-droplet"></i></div>
+                    <h3>Known For</h3>
+                    <p>Mineral baths that attracted visitors from across the country.</p>
+                </div>
+
+            </div>
+
+            <h2 class="section-title">The Story</h2>
+
             <p>
-                The Hotel Will Rogers has become one of Claremore's most recognizable
-                downtown landmarks. Today it is split into the Will Rogers loft apartments, Gibby's Restaurant, and the French Quarter Coffee Co.
-            </p>
+The Hotel Will Rogers has stood at the heart of downtown Claremore since it was built between 1929 and 1930. Today, the beautifully restored building is home to the Will Rogers Lofts, Gibby's Restaurant, and French Quarter Coffee Co., while preserving an important piece of the city's history.
+</p>
 
-            <p>
-                Hotel Will rogers was built between 1929-1930. Visitors once came from across the region to experience Claremore's
-                mineral waters and hospitality. The smell of the sulfur baths would waft though the streets to welcome visitors. Though called radium baths the water did not actuallly contain radium, but rather 13 minerals including sulfur, salt, and iron. 
-            The hotel closed in 1991 and was in disrepair. It was about to be demolished, but was purchased by the National Register of Historic Places. In 1997 it was restored for 2.5 million dollars creating 38 one and two bedroom apartments on the upper floors.
-            On the sixth floor three of the famous mineral baths were preserved. 
-        </p>
+<p>
+During Claremore's mineral bath boom, visitors traveled from across the region to experience the city's famous healing waters and warm hospitality. The distinctive scent of the sulfur baths often drifted through the streets, greeting guests as they arrived. Although commonly called "radium baths," the water did not actually contain radium. Instead, the water was rich in 13 naturally occurring minerals, including sulfur, salt, and iron.
+</p>
 
-            <a href="jl-wilson.html" class="button">Next Stop →</a>
+<p>
+After closing in 1991, the hotel fell into disrepair and faced the possibility of demolition. In 1997, the building was purchased and restored through a $2.5 million renovation that transformed the upper floors into 38 one- and two-bedroom loft apartments. As part of the restoration, three of the original mineral baths on the sixth floor were preserved, allowing visitors today to glimpse one of the most distinctive features of the historic Hotel Will Rogers.
+</p>
+
+
+            <div class="tour-map">
+                <h3 class="section-title">Walk to the Next Stop</h3>
+                <p>Continue down Will Rogers Boulevard toward the next stop.</p>
+            </div>
+
+            <a href="next-page.html" class="button">Next Stop →</a>
+
+        </div>
+    </div>
+
+    <script>
+        const slider = document.querySelector(".slider");
+        const overlay = document.querySelector(".image-overlay");
+
+        if (slider && overlay) {
+            slider.addEventListener("input", function () {
+                overlay.style.width = slider.value + "%";
+            });
+        }
+    </script>
 </body>
 </html>
