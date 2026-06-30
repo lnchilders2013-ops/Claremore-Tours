@@ -107,24 +107,33 @@ p {
     cursor: pointer;
     margin-top: 15px;
 }
-
-.image-compare {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: 350px;
-    overflow: hidden;
-    border-radius: 12px;
-    margin: 20px 0;
+.section-title {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
 }
 
-.image-compare img {
+.section-title::before,
+.section-title::after {
+    width: 45px;
+    margin: 0;
+}
+
+.image-compare {
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    margin: 20px auto;
+}
+
+.image-compare img,
+.image-overlay img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
-    border-radius: 0;
-    margin: 0;
 }
 
 .image-overlay {
@@ -218,12 +227,38 @@ p {
     }
 
     .image-compare {
-        height: 280px;
-    }
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    margin: 20px auto;
+    border-radius: 18px;
+}
 
-    .image-overlay img {
-        width: 600px;
-    }
+.image-compare img,
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+    .slider {
+    left: 5%;
+    width: 90%;
+    bottom: 10px;
+}
+.section-title {
+    font-size: 1.15rem;
+    letter-spacing: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.section-title::before,
+.section-title::after {
+    width: 45px;
+    margin: 0;
+}
 
     .button {
         display: block;
