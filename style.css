@@ -10,10 +10,11 @@ body {
 .container {
     max-width: 900px;
     margin: auto;
-    background: white;
-    padding: 25px;
+    background: #f5f1e8;
+    padding: 12px;
     border-radius: 12px;
 }
+
 .stop-card {
     background: #fbf6ed;
     border: 1px solid #e2d2bd;
@@ -25,9 +26,15 @@ h1 {
     text-align: center;
     font-size: 2.2rem;
 }
-/* ==========================
-   Intro Quote
-========================== */
+
+.subtitle {
+    text-align: center;
+    color: #5a4a3d;
+}
+
+p {
+    font-size: 16px;
+}
 
 .intro-quote {
     max-width: 700px;
@@ -47,21 +54,6 @@ h1 {
     margin: 0;
 }
 
-.intro-quote em {
-    font-style: italic;
-}
-
-h2 {
-    font-size: 1.6rem;
-}
-
-h3 {
-    font-size: 1.2rem;
-}
-/* ==========================
-   Section Titles
-========================== */
-
 .section-title {
     text-align: center;
     text-transform: uppercase;
@@ -70,70 +62,35 @@ h3 {
     font-size: 1.35rem;
     font-weight: 600;
     margin: 40px 0 30px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
 }
 
 .section-title::before,
 .section-title::after {
     content: "";
-    display: inline-block;
     width: 80px;
     height: 2px;
     background: #d8c4a8;
-    vertical-align: middle;
-    margin: 0 18px;
-}
-
-
-p {
-    font-size: 16px;
-}
-
-.stop {
-    margin-top: 30px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.button {
-    display: inline-block;
-    background-color: #6b3f22;
-    color: white;
-    text-decoration: none;
-    border: none;
-    padding: 16px 24px;
-    border-radius: 8px;
-    font-size: 20px;
-    cursor: pointer;
-    margin-top: 15px;
-}
-.section-title {
-    font-size: 1.15rem;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.section-title::before,
-.section-title::after {
-    width: 45px;
-    margin: 0;
 }
 
 .image-compare {
+    position: relative;
     width: 100%;
-    max-width: 100%;
-    height: 320px;
+    max-width: 600px;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 18px;
     margin: 20px auto;
 }
 
-.image-compare img,
-.image-overlay img {
+.image-compare > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .image-overlay {
@@ -147,31 +104,24 @@ p {
 
 .image-overlay img {
     width: 600px;
+    height: 350px;
     max-width: none;
-    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 .slider {
     position: absolute;
-    left: 0;
-    bottom: 15px;
-    width: 100%;
+    left: 5%;
+    bottom: 12px;
+    width: 90%;
 }
 
 .photo-note {
     font-size: 0.9rem;
     color: #555;
+    text-align: center;
 }
-
-.tour-map {
-    background: #f5f1e8;
-    padding: 15px;
-    border-radius: 12px;
-    margin-top: 25px;
-}
-/* ==========================
-   Quick Facts
-========================== */
 
 .facts-grid {
     display: grid;
@@ -188,15 +138,11 @@ p {
     text-align: center;
     box-shadow: 0 4px 10px rgba(0,0,0,.08);
 }
-.fact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,.15);
-}
 
-.fact-icon{
-    font-size:30px;
-    color:#6b3f22;
-    margin-bottom:14px;
+.fact-icon {
+    font-size: 30px;
+    color: #6b3f22;
+    margin-bottom: 14px;
 }
 
 .fact-card h3 {
@@ -211,105 +157,28 @@ p {
     font-size: .95rem;
     color: #444;
 }
-@media (max-width: 768px) {
 
-    body {
-        font-size: 20px;
-        padding: 10px;
-    }
-
-    h1 {
-        font-size: 2.2rem;
-    }
-
-    .container {
-        padding: 18px;
-   .image-compare {
-    position: relative;
-    width: 100%;
-    max-width: 100%;
-    height: 320px;
-    margin: 20px auto;
-    border-radius: 18px;
-    overflow: hidden;
+.tour-map {
+    background: #f5f1e8;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 25px;
 }
 
-.image-compare > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+.button {
+    display: inline-block;
+    background-color: #6b3f22;
+    color: white;
+    text-decoration: none;
+    border: none;
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
-.image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 50%;
-    height: 100%;
-    overflow: hidden;
-}
-
-.image-overlay img {
-    width: 600px;
-    max-width: none;
-    height: 100%;
-    object-fit: cover;
-}
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-    .slider {
-    left: 5%;
-    width: 90%;
-    bottom: 10px;
-}
-.section-title {
-    font-size: 1.15rem;
-    letter-spacing: 2px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-}
-
-.section-title::before,
-.section-title::after {
-    width: 45px;
-    margin: 0;
-}
-
-    .button {
-        display: block;
-        width: 100%;
-        text-align: center;
-        box-sizing: border-box;
-    }
-
-    .facts-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .fact-card {
-        padding: 18px;
-    }
-
-    .fact-icon {
-        font-size: 34px;
-    }
-
-    .fact-card h3 {
-        font-size: 1rem;
-    }
-
-    .fact-card p {
-        font-size: .9rem;
-    }
-
-}
-/* ==========================
-   Landing Page
-========================== */
+/* Landing Page */
 
 .hero {
     text-align: center;
@@ -360,4 +229,67 @@ p {
     color: #6b3f22;
     font-weight: bold;
     text-decoration: none;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+    body {
+        font-size: 20px;
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .container {
+        padding: 8px;
+    }
+
+    .stop-card {
+        padding: 18px;
+    }
+
+    .section-title {
+        font-size: 1.15rem;
+        letter-spacing: 2px;
+        gap: 12px;
+    }
+
+    .section-title::before,
+    .section-title::after {
+        width: 45px;
+    }
+
+    .image-compare {
+        height: 280px;
+    }
+
+    .image-overlay img {
+        height: 280px;
+    }
+
+    .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+        box-sizing: border-box;
+    }
+
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fact-card {
+        padding: 18px;
+    }
+
+    .fact-icon {
+        font-size: 34px;
+    }
+
+    .fact-card p {
+        font-size: .9rem;
+    }
 }
