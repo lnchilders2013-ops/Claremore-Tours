@@ -104,9 +104,10 @@ p {
 
 .image-overlay img {
     width: 600px;
-    height: 350px;
+    height: 100%;
     max-width: none;
     object-fit: cover;
+    object-position: left center;
     display: block;
 }
 
@@ -269,6 +270,12 @@ p {
     .image-overlay img {
         height: 280px;
     }
+
+    .image-overlay img {
+    width: 600px;
+    height: 280px;
+    object-position: left center;
+}
 
     .button {
         display: block;
