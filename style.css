@@ -264,16 +264,16 @@ p {
     }
 
     .image-compare {
-    height: 280px;
+    height: 230px;
 }
 
 .image-compare > img {
-    height: 280px;
+    height: 230px;
 }
 
 .image-overlay img {
     width: 600px;
-    height: 280px;
+    height: 230px;
     max-width: none;
     object-fit: cover;
     object-position: left center;
